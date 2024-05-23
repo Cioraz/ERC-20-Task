@@ -53,6 +53,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountB",
+						"type": "uint256"
+					}
+				],
+				"name": "exchangeTokenBForTokenA",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "owner",
 				"outputs": [
@@ -141,11 +154,11 @@
 			]
 		},
 		"contracts/MyToken.sol": {
-			"keccak256": "0xa10009697e6abeb2aa3ec45290a217d4705ea3cb5f72f2366e81a1e456cf4c14",
+			"keccak256": "0xcbbc71b27a6e35c4143e75d57b1839ebbd0ad60a270ffb43fc7b15b09666be42",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e4e00900395f5fc152917bcb5c4cd780c42d66d7fa6e065e5de5e9df247a1714",
-				"dweb:/ipfs/QmXYuYF21yJSZSvcridYTUz46J68fmpP3f1eACWeJskijX"
+				"bzz-raw://2b6ac82bbc81e77d7e9484b26422f8abbc0526064144721cdcb5ff14495da69c",
+				"dweb:/ipfs/QmQMaUTrSREtyfUsNX99BveLTRmSGbQcjayNj75MLWfV9v"
 			]
 		}
 	},
