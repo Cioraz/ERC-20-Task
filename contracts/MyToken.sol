@@ -25,10 +25,10 @@ contract SimpleDEX{
     }
 
     function exchangeTokenAForTokenB(uint amountA) public  {
-        // Ensure contract has enough tokenB for transfer
-        require(tokenB.balanceOf(address(this))>=amountA*exchangeRate,"Insufficient Tokens B");
-        // Transfer tokenA from user to DEX contract
-        require(tokenA.transferFrom(msg.sender,address(this),amountA),"Error: Transfer to DEX failed!");
-        tokenB.transfer(msg.sender,amountA*exchangeRate);
+        uint amountB=amountA*exchangeRate;
+        require(tokenA.balanceOf(msg.sender) >= amountA, "Insufficient tokenA balance");
+        require(tokenB.balanceOf(address(this)) >= amountB, "Insufficient tokenB balance");
+        require(tokenA.transferFrom(msg.sender, address(this), amountA), "Error: Transfer of tokenA to DEX failed!");
+        require(tokenB.transfer(msg.sender, amountB), "Error: Transfer of tokenB to user failed!");   
     }
 }
